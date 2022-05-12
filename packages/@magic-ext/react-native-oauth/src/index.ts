@@ -1,5 +1,5 @@
 // @ts-ignore
-import RNSFAuthenticationSession from 'react-native-sf-authentication-session';
+import SafariWebAuth from 'react-native-safari-web-auth';
 import { Extension } from '@magic-sdk/react-native';
 import { createCryptoChallenge } from './crypto';
 import {
@@ -25,7 +25,7 @@ export class OAuthExtension extends Extension.Internal<'oauth'> {
         const url = `https://auth.magic.link/v1/oauth2/${provider}/start?${query}`;
 
         try {
-          const resultUrl = await RNSFAuthenticationSession.getSafariData(url, redirectURI);
+          const resultUrl = await SafariWebAuth.requestAuth(url, redirectURI);
           console.log('RESULT URL:', resultUrl);
           const queryString = new URL(resultUrl).search;
           console.log('QUERY STRING:', queryString);

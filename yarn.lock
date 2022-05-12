@@ -3832,7 +3832,7 @@ __metadata:
     "@magic-sdk/types": ^7.1.1
     "@types/crypto-js": ~3.1.47
     crypto-js: ^3.3.0
-    react-native-sf-authentication-session: ^0.1.1
+    react-native-safari-web-auth: ^1.0.4
   languageName: unknown
   linkType: soft
 
@@ -15385,12 +15385,10 @@ pvutils@latest:
   languageName: node
   linkType: hard
 
-"react-native-sf-authentication-session@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "react-native-sf-authentication-session@npm:0.1.1"
-  peerDependencies:
-    react-native: ^0.41.2
-  checksum: 04b663774d2586462f20b8e1d9163cd4a0a01b2bf22f86b9fad1d27f13c716cd9fad5e282e7b155ee6d5720b623200c65a725374439e512d461f697ccc8b04d9
+"react-native-safari-web-auth@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "react-native-safari-web-auth@npm:1.0.4"
+  checksum: ec819ad97ff4d78811a447fc5dc5cf82e3403fd472fc44dd90f0394d1e4e55723cccea27d6fbb3c7619815d6447500e96f6c2da53226a586372320bdeb94f511
   languageName: node
   linkType: hard
 
