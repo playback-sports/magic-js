@@ -1,4 +1,5 @@
-import * as WebBrowser from 'expo-web-browser';
+// @ts-ignore
+import RNSFAuthenticationSession from 'react-native-sf-authentication-session';
 import { Extension } from '@magic-sdk/react-native';
 import { createCryptoChallenge } from './crypto';
 import {
@@ -23,18 +24,13 @@ export class OAuthExtension extends Extension.Internal<'oauth'> {
         const { provider, query, redirectURI } = await createURI.call(this, configuration);
         const url = `https://auth.magic.link/v1/oauth2/${provider}/start?${query}`;
 
-        /**
-         * Response Type
-         * https://docs.expo.io/versions/latest/sdk/webbrowser/#returns
-         */
-        const res = await WebBrowser.openAuthSessionAsync(url, redirectURI);
-
-        if (res.type === 'success') {
-          const queryString = new URL(res.url).search;
+        try {
+          const resultUrl = await RNSFAuthenticationSession.getSafariData(url, redirectURI);
+          const queryString = new URL(resultUrl).search;
 
           resolve(getResult.call(this, queryString.toString()));
-        } else {
-          reject(this.createError<object>(res.type, 'User has cancelled the authentication', {}));
+        } catch (e: any) {
+          reject(this.createError<object>(e.type, 'User has cancelled the authentication', {}));
         }
       } catch (err: any) {
         reject(
