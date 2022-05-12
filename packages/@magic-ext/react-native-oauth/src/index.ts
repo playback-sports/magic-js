@@ -26,11 +26,13 @@ export class OAuthExtension extends Extension.Internal<'oauth'> {
 
         try {
           const resultUrl = await RNSFAuthenticationSession.getSafariData(url, redirectURI);
+          console.log('RESULT URL:', resultUrl);
           const queryString = new URL(resultUrl).search;
-
+          console.log('QUERY STRING:', queryString);
           resolve(getResult.call(this, queryString.toString()));
         } catch (e: any) {
-          reject(this.createError<object>(e.type, 'User has cancelled the authentication', {}));
+          console.log('ERROR:', e);
+          reject(this.createError<object>(e, 'User has cancelled the authentication', {}));
         }
       } catch (err: any) {
         reject(
