@@ -3262,18 +3262,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@magic-ext/react-native-oauth@workspace:packages/@magic-ext/react-native-oauth":
-  version: 0.0.0-use.local
-  resolution: "@magic-ext/react-native-oauth@workspace:packages/@magic-ext/react-native-oauth"
-  dependencies:
-    "@magic-sdk/react-native": ^8.2.1
-    "@magic-sdk/types": ^8.0.0
-    "@types/crypto-js": ~3.1.47
-    crypto-js: ^3.3.0
-    expo-web-browser: ^11.0.0
-  languageName: unknown
-  linkType: soft
-
 "@magic-ext/solana@workspace:packages/@magic-ext/solana":
   version: 0.0.0-use.local
   resolution: "@magic-ext/solana@workspace:packages/@magic-ext/solana"
@@ -3901,6 +3889,18 @@ __metadata:
   checksum: 8b6e365aaed7494a7d0c655f2382b9e4a7096c06c349f37e48f0167e59ed3450a3ed29553e32546ef20ca1b08203ac03f7c697e7c9711a74e38f4b9e4ee1d7d8
   languageName: node
   linkType: hard
+
+"@playback-sports/react-native-oauth@workspace:packages/@magic-ext/react-native-oauth":
+  version: 0.0.0-use.local
+  resolution: "@playback-sports/react-native-oauth@workspace:packages/@magic-ext/react-native-oauth"
+  dependencies:
+    "@magic-sdk/react-native": ^8.2.1
+    "@magic-sdk/types": ^8.0.0
+    "@types/crypto-js": ~3.1.47
+    crypto-js: ^3.3.0
+    expo-web-browser: ^11.0.0
+  languageName: unknown
+  linkType: soft
 
 "@qvvg/templar@npm:0.0.1":
   version: 0.0.1
