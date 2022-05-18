@@ -1,12 +1,15 @@
 {
-  "name": "@magic-ext/react-native-oauth",
-  "version": "2.2.1",
+  "name": "@playback-sports/react-native-oauth",
+  "version": "2.2.2-playback-6",
   "description": "Magic SDK OAuth Extension for React Native environments.",
   "author": "Magic <team@magic.link> (https://magic.link/)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/magiclabs/magic-js"
+    "url": "https://github.com/playback-sports/magic-js"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "files": [
     "dist"
@@ -27,7 +30,7 @@
   "dependencies": {
     "@magic-sdk/types": "^7.1.1",
     "crypto-js": "^3.3.0",
-    "expo-web-browser": "^8.3.1"
+    "expo-web-browser": "10.2.0"
   },
   "devDependencies": {
     "@magic-sdk/react-native": "^8.2.1",
